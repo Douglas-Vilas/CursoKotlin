@@ -1,8 +1,8 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
-    print("Welcome to Bytebank!")
+fun main() {
+    // Design of a digital Bank
+    println("Welcome to Bytebank!")
+    val titular = "Douglas" // val = Cannot be changed. var = Can be changed.
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    //println("Program arguments: ${args.joinToString()}")
+    println("Titular: $titular") // In Kotlin, we can use the "$" to use the variable inside the string field.
+
 }
