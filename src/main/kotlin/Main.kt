@@ -1,8 +1,16 @@
 fun main() {
     // Design of a digital Bank
     println("Welcome to Bytebank!")
-    val titular = "Douglas" // val = Cannot be changed. var = Can be changed.
+
+    // Account Details
+    val titular = "Douglas" // val = Cannot be changed(reassigned). var = Can be changed.
+    val accountNumber = 1000
+    var balance = 0.0 // Variable that can change its initial value.
+    balance = 100 + 2.0 // Or 100.0
+    balance += 200
 
     println("Titular: $titular") // In Kotlin, we can use the "$" to use the variable inside the string field.
+    println("Account Number: $accountNumber")
+    println("Account Balance: $balance")
 
 }
