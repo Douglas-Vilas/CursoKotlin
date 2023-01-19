@@ -12,14 +12,46 @@ fun main() {
     accountAngelica.number = 1001
     accountAngelica.balance = 100.0
 
-//    println(accountAngelica.titular)
-//    println(accountAngelica.number)
-//    println(accountAngelica.balance)
-//
-//
-//    println(accountDouglas.titular)
-//    println(accountDouglas.number)
-//    println(accountDouglas.balance)
+    println(accountAngelica.titular)
+    println(accountAngelica.number)
+    println(accountAngelica.balance)
+
+    println("")
+
+    println(accountDouglas.titular)
+    println(accountDouglas.number)
+    println(accountDouglas.balance)
+
+    println("")
+
+    println("Depositing in the account of Douglas")
+    deposit(accountDouglas, 50.0)
+    println(accountDouglas.balance)
+
+    println("Depositing in the account of Angélica")
+    deposit(accountAngelica, 70.0)
+    println(accountAngelica.balance)
+
+
+}
+
+fun deposit (account: Account, value: Double) {
+    account.balance += value
+}
+
+class Account {
+    var titular = ""
+    var number = 0
+    var balance = 0.0
+}
+
+fun testCopiesAndReferences() {
+    val numberX = 10
+    var numberY = numberX
+    numberY++
+
+    println("NumberX $numberX")
+    println("NumberY $numberY")
 
     val accountMaicon = Account()
     accountMaicon.titular = "Maincon"
@@ -29,13 +61,6 @@ fun main() {
     println("Maicon account holder: ${accountMaicon.titular}")
     println("Mother account holder: ${accountMae.titular}")
 
-
-}
-
-class Account {
-    var titular = ""
-    var number = 0
-    var balance = 0.0
 }
 
 fun testLoops() {
