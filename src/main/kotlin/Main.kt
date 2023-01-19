@@ -12,14 +12,24 @@ fun main() {
     accountAngelica.number = 1001
     accountAngelica.balance = 100.0
 
-    println(accountAngelica.titular)
-    println(accountAngelica.number)
-    println(accountAngelica.balance)
+//    println(accountAngelica.titular)
+//    println(accountAngelica.number)
+//    println(accountAngelica.balance)
+//
+//
+//    println(accountDouglas.titular)
+//    println(accountDouglas.number)
+//    println(accountDouglas.balance)
+
+    val accountMaicon = Account()
+    accountMaicon.titular = "Maincon"
+    var accountMae = accountMaicon
+    accountMae.titular = "Mother"
+
+    println("Maicon account holder: ${accountMaicon.titular}")
+    println("Mother account holder: ${accountMae.titular}")
 
 
-    println(accountDouglas.titular)
-    println(accountDouglas.number)
-    println(accountDouglas.balance)
 }
 
 class Account {
