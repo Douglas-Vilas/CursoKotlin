@@ -1,6 +1,34 @@
 fun main() {
     // Design of a digital Bank
     println("Welcome to Bytebank!")
+    val accountDouglas = Account()
+    accountDouglas.titular = "Douglas"
+    accountDouglas.number = 1000
+    accountDouglas.balance = 200.0
+
+
+    val accountAngelica = Account()
+    accountAngelica.titular = "Angélica"
+    accountAngelica.number = 1001
+    accountAngelica.balance = 100.0
+
+    println(accountAngelica.titular)
+    println(accountAngelica.number)
+    println(accountAngelica.balance)
+
+
+    println(accountDouglas.titular)
+    println(accountDouglas.number)
+    println(accountDouglas.balance)
+}
+
+class Account {
+    var titular = ""
+    var number = 0
+    var balance = 0.0
+}
+
+fun testLoops() {
     var i = 0
     while (i < 5) {
 
@@ -15,8 +43,18 @@ fun main() {
         println()
         i++
     }
+    for (i in 5 downTo 1) {
 
-//    testConditions(balance)
+        // Account Details
+        val titular = "Douglas $i" // val = Cannot be changed(reassigned). var = Can be changed.
+        val accountNumber = 1000 + i
+        var balance = i + 10.0  // Variable that can change its initial value.
+
+        println("Titular: $titular") // In Kotlin, we can use the "$" to use the variable inside the string field.
+        println("Account Number: $accountNumber")
+        println("Account Balance: $balance")
+        println()
+    }
 }
 
 fun testConditions(balance: Double) {
