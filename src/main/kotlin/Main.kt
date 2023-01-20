@@ -15,34 +15,59 @@ fun main() {
     println(accountAngelica.titular)
     println(accountAngelica.number)
     println(accountAngelica.balance)
-
     println("")
 
     println(accountDouglas.titular)
     println(accountDouglas.number)
     println(accountDouglas.balance)
-
     println("")
 
     println("Depositing in the account of Douglas")
-    deposit(accountDouglas, 50.0)
+    accountDouglas.deposit( 50.0)
     println(accountDouglas.balance)
+    println("")
 
     println("Depositing in the account of Angélica")
-    deposit(accountAngelica, 70.0)
+    accountAngelica.deposit(70.0)
     println(accountAngelica.balance)
+    println("")
 
+    println("Withdrawing from Douglas's account")
+    accountDouglas.withdraw(250.0)
+    println(accountDouglas.balance)
+    println("")
 
-}
+    println("Withdrawing from Angelica's account")
+    accountAngelica.withdraw(100.0)
+    println(accountAngelica.balance)
+    println("")
 
-fun deposit (account: Account, value: Double) {
-    account.balance += value
+    println("Overdraft on Douglas account")
+    accountDouglas.withdraw(100.0)
+    println(accountDouglas.balance)
+    println("")
+
+    println("Overdraft on Angélica account")
+    accountAngelica.withdraw(500.0)
+    println(accountAngelica.balance)
+    println("")
+
 }
 
 class Account {
     var titular = ""
     var number = 0
     var balance = 0.0
+
+    fun deposit(value: Double) {
+        this.balance += value
+    }
+
+    fun withdraw(value: Double) {
+        if (balance >= value) {
+            balance -= value
+        }
+    }
 }
 
 fun testCopiesAndReferences() {
