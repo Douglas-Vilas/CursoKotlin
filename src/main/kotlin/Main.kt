@@ -23,7 +23,7 @@ fun main() {
     println("")
 
     println("Depositing in the account of Douglas")
-    accountDouglas.deposit( 50.0)
+    accountDouglas.deposit(50.0)
     println(accountDouglas.balance)
     println("")
 
@@ -52,6 +52,18 @@ fun main() {
     println(accountAngelica.balance)
     println("")
 
+    println("Transfer of Angélica's account to Douglas")
+    if (accountAngelica.transfer(100.0, accountDouglas)) {
+        println("Successful transfer")
+    } else {
+        println("Transfer failure")
+    }
+    println("")
+
+    println("Douglas account: ${accountDouglas.balance}")
+    println("Angélica account: ${accountAngelica.balance}")
+    println("")
+
 }
 
 class Account {
@@ -67,6 +79,15 @@ class Account {
         if (balance >= value) {
             balance -= value
         }
+    }
+
+    fun transfer(value: Double, destiny: Account): Boolean {
+        if (balance >= value) {
+            balance -= value
+            destiny.balance += value
+            return true
+        }
+        return false
     }
 }
 
