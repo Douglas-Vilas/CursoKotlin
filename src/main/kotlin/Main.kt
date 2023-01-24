@@ -4,73 +4,72 @@ fun main() {
     val accountDouglas = Account()
     accountDouglas.titular = "Douglas"
     accountDouglas.number = 1000
-    accountDouglas.balance = 200.0
+    accountDouglas.setBalance(-200.0)
 
 
     val accountAngelica = Account()
     accountAngelica.titular = "Angélica"
     accountAngelica.number = 1001
-    accountAngelica.balance = 100.0
+    accountAngelica.setBalance(100.0)
 
     println(accountAngelica.titular)
     println(accountAngelica.number)
-    println(accountAngelica.balance)
+    println(accountAngelica.getBalance())
     println("")
 
     println(accountDouglas.titular)
     println(accountDouglas.number)
-    println(accountDouglas.balance)
+    println(accountDouglas.getBalance())
     println("")
 
-    println("Depositing in the account of Douglas")
-    accountDouglas.deposit(50.0)
-    println(accountDouglas.balance)
-    println("")
-
-    println("Depositing in the account of Angélica")
-    accountAngelica.deposit(70.0)
-    println(accountAngelica.balance)
-    println("")
-
-    println("Withdrawing from Douglas's account")
-    accountDouglas.withdraw(250.0)
-    println(accountDouglas.balance)
-    println("")
-
-    println("Withdrawing from Angelica's account")
-    accountAngelica.withdraw(100.0)
-    println(accountAngelica.balance)
-    println("")
-
-    println("Overdraft on Douglas account")
-    accountDouglas.withdraw(100.0)
-    println(accountDouglas.balance)
-    println("")
-
-    println("Overdraft on Angélica account")
-    accountAngelica.withdraw(500.0)
-    println(accountAngelica.balance)
-    println("")
-
-    println("Transfer of Angélica's account to Douglas")
-    if (accountAngelica.transfer(100.0, accountDouglas)) {
-        println("Successful transfer")
-    } else {
-        println("Transfer failure")
-    }
-    println("")
-
-    println("Douglas account: ${accountDouglas.balance}")
-    println("Angélica account: ${accountAngelica.balance}")
-    println("")
-
+//    println("Depositing in the account of Douglas")
+//    accountDouglas.deposit(50.0)
+//    println(accountDouglas.balance)
+//    println("")
+//
+//    println("Depositing in the account of Angélica")
+//    accountAngelica.deposit(70.0)
+//    println(accountAngelica.balance)
+//    println("")
+//
+//    println("Withdrawing from Douglas's account")
+//    accountDouglas.withdraw(250.0)
+//    println(accountDouglas.balance)
+//    println("")
+//
+//    println("Withdrawing from Angelica's account")
+//    accountAngelica.withdraw(100.0)
+//    println(accountAngelica.balance)
+//    println("")
+//
+//    println("Overdraft on Douglas account")
+//    accountDouglas.withdraw(100.0)
+//    println(accountDouglas.balance)
+//    println("")
+//
+//    println("Overdraft on Angélica account")
+//    accountAngelica.withdraw(500.0)
+//    println(accountAngelica.balance)
+//    println("")
+//
+//    println("Transfer of Angélica's account to Douglas")
+//    if (accountAngelica.transfer(100.0, accountDouglas)) {
+//        println("Successful transfer")
+//    } else {
+//        println("Transfer failure")
+//    }
+//    println("")
+//
+//    println("Douglas account: ${accountDouglas.balance}")
+//    println("Angélica account: ${accountAngelica.balance}")
+//    println("")
 }
 
 class Account {
     var titular = ""
     var number = 0
-    var balance = 0.0
-
+    private var balance = 0.0 // Private = Protection for the part of the code that I don't
+                             // want others to have access to modify.
     fun deposit(value: Double) {
         this.balance += value
     }
@@ -84,10 +83,22 @@ class Account {
     fun transfer(value: Double, destiny: Account): Boolean {
         if (balance >= value) {
             balance -= value
-            destiny.balance += value
+            destiny.deposit(value)
             return true
         }
         return false
+    }
+
+    // Function to return a copy of the balance(private class) information.
+    fun getBalance(): Double {
+        return balance
+    }
+
+    // Function "Set" serves to insert value
+    fun setBalance(value: Double) {
+        if (value > 0){
+            balance = value
+        }
     }
 }
 
