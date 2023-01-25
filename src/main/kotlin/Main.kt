@@ -1,15 +1,10 @@
 fun main() {
     // Design of a digital Bank
     println("Welcome to Bytebank!")
-    val accountDouglas = Account()
-    accountDouglas.titular = "Douglas"
-    accountDouglas.number = 1000
+    val accountDouglas = Account("Douglas", 1000)
     accountDouglas.deposit(200.0)
 
-
-    val accountAngelica = Account()
-    accountAngelica.titular = "Angélica"
-    accountAngelica.number = 1001
+    val accountAngelica = Account("Angélica", 1001)
     accountAngelica.deposit(300.0)
 
     println(accountAngelica.titular)
@@ -65,11 +60,17 @@ fun main() {
     println("")
 }
 
-class Account {
-    var titular = ""
-    var number = 0
+class Account(
+    var titular: String,
+    var number: Int
+) {
     var balance = 0.0
-       private set
+        private set
+
+//    constructor(titular: String, number: Int){
+//        this.titular = titular
+//        this.number = number
+//    }
 
     fun deposit(value: Double) {
         if (value > 0) {
@@ -113,10 +114,11 @@ fun testCopiesAndReferences() {
     println("NumberX $numberX")
     println("NumberY $numberY")
 
-    val accountMaicon = Account()
-    accountMaicon.titular = "Maincon"
-    var accountMae = accountMaicon
+    val accountMaicon = Account("Maicon", 1002)
+    accountMaicon.titular = "Maicon"
+    var accountMae = Account("Mother", 1003)
     accountMae.titular = "Mother"
+    accountMaicon.titular = "Maicon"
 
     println("Maicon account holder: ${accountMaicon.titular}")
     println("Mother account holder: ${accountMae.titular}")
