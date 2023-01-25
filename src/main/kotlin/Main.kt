@@ -1,10 +1,10 @@
 fun main() {
     // Design of a digital Bank
     println("Welcome to Bytebank!")
-    val accountDouglas = Account("Douglas", 1000)
+    val accountDouglas = Account(titular = "Douglas", number = 1000)
     accountDouglas.deposit(200.0)
 
-    val accountAngelica = Account("Angélica", 1001)
+    val accountAngelica = Account(titular = "Angélica", number = 1001)
     accountAngelica.deposit(300.0)
 
     println(accountAngelica.titular)
@@ -18,37 +18,37 @@ fun main() {
     println("")
 
     println("Depositing in the account of Douglas")
-    accountDouglas.deposit(50.0)
+    accountDouglas.deposit(value = 50.0)
     println(accountDouglas.balance)
     println("")
 
     println("Depositing in the account of Angélica")
-    accountAngelica.deposit(70.0)
+    accountAngelica.deposit(value = 70.0)
     println(accountAngelica.balance)
     println("")
 
     println("Withdrawing from Douglas's account")
-    accountDouglas.withdraw(250.0)
+    accountDouglas.withdraw(value = 250.0)
     println(accountDouglas.balance)
     println("")
 
     println("Withdrawing from Angelica's account")
-    accountAngelica.withdraw(100.0)
+    accountAngelica.withdraw(value = 100.0)
     println(accountAngelica.balance)
     println("")
 
     println("Overdraft on Douglas account")
-    accountDouglas.withdraw(100.0)
+    accountDouglas.withdraw(value = 100.0)
     println(accountDouglas.balance)
     println("")
 
     println("Overdraft on Angélica account")
-    accountAngelica.withdraw(500.0)
+    accountAngelica.withdraw(value = 500.0)
     println(accountAngelica.balance)
     println("")
 
     println("Transfer of Angélica's account to Douglas")
-    if (accountAngelica.transfer(100.0, accountDouglas)) {
+    if (accountAngelica.transfer(value = 100.0, accountDouglas)) {
         println("Successful transfer")
     } else {
         println("Transfer failure")
@@ -62,7 +62,7 @@ fun main() {
 
 class Account(
     var titular: String,
-    var number: Int
+    val number: Int
 ) {
     var balance = 0.0
         private set
