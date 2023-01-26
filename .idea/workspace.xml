@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee34839-0683-4156-8f45-c144131640d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Account.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/testAccountBehaviors.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/testConditions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/testCopiesAndReferences.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/testLoops.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Employee.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Manager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
@@ -22,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
