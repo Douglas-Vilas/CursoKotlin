@@ -10,9 +10,9 @@ class Director(
     wege = wege
 ) {
 
-//    fun bonus(): Double {
-//        return wege * 0.2
-//    }
+    override fun bonus(): Double {
+        return wege * 0.3
+    }
 
     fun authentic(password: Int): Boolean {
         if (this.password == password){
