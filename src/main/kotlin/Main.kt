@@ -33,6 +33,29 @@ fun main() {
     } else {
         println("Authentication failed")
     }
+    println("")
+
+    val maicon = Director(
+        name = "Maicon",
+        cpf = "333.333.333-33",
+        wege = 4000.00,
+        password = 4000,
+        prl = 200.0
+    )
+
+    println("Name: ${maicon.name}")
+    println("CPF: ${maicon.cpf}")
+    println("Wege: ${maicon.wege}")
+    println("Bonus: ${maicon.bonus()}")
+    println("PLR: ${maicon.prl}")
+    println("")
+
+    if (maicon.authentic(4000)){
+        println("Successfully authenticated")
+    } else {
+        println("Authentication failed")
+    }
+    println("")
 }
 
 
