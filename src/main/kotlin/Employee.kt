@@ -3,5 +3,7 @@ open class Employee(
     val cpf: String,
     val wege: Double,
 ) {
-    open fun bonus(): Double = wege * 0.1
+    open fun bonus(): Double {
+        return wege * 0.1
+    }
 }

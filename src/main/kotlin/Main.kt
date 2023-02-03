@@ -57,10 +57,18 @@ fun main() {
     }
     println("")
 
+    val fabio: Employee = Analyst(
+        name = "Fábio",
+        cpf = "444.444.444-44",
+        wege = 3000.0
+    )
+    println("")
+
     val caculator = BonusCaculator()
     caculator.register(angelica)
     caculator.register(douglas)
     caculator.register(maicon)
+    caculator.register(fabio)
 
     println("Total bonus: ${caculator.total}")
 }
