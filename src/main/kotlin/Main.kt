@@ -56,6 +56,13 @@ fun main() {
         println("Authentication failed")
     }
     println("")
+
+    val caculator = BonusCaculator()
+    caculator.register(angelica)
+    caculator.register(douglas)
+    caculator.register(maicon)
+
+    println("Total bonus: ${caculator.total}")
 }
 
 
