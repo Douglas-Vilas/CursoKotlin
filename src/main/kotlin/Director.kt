@@ -3,7 +3,7 @@ class Director(
      cpf: String,
      wege: Double,
     val password: Int,
-    val prl: Double
+    val plr: Double
 ) : Employee(
     name = name,
     cpf = cpf,
@@ -11,7 +11,7 @@ class Director(
 ) {
 
     override fun bonus(): Double {
-        return wege * 0.3
+        return super.bonus() + wege + plr
     }
 
     fun authentic(password: Int): Boolean {

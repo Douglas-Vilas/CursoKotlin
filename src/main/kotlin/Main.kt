@@ -40,14 +40,14 @@ fun main() {
         cpf = "333.333.333-33",
         wege = 4000.00,
         password = 4000,
-        prl = 200.0
+        plr = 200.0
     )
 
     println("Name: ${maicon.name}")
     println("CPF: ${maicon.cpf}")
     println("Wege: ${maicon.wege}")
     println("Bonus: ${maicon.bonus()}")
-    println("PLR: ${maicon.prl}")
+    println("PLR: ${maicon.plr}")
     println("")
 
     if (maicon.authentic(4000)){
