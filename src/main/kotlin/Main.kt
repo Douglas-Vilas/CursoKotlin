@@ -3,74 +3,36 @@ fun main() {
     println("Welcome to Bytebank!")
     println("")
 
-    val angelica = Employee(
-        name = "Angélica",
-        cpf = "111.111.111-11",
-        wege = 1000.0,
+    val currentAccount= CurrentAccount(
+        titular = "Angélica",
+        number = 1000
+    )
+    val savingsAccount= SavingsAccount(
+        titular = "Douglas",
+        number = 1001
     )
 
-    println("Name: ${angelica.name}")
-    println("CPF: ${angelica.cpf}")
-    println("Wege: ${angelica.wege}")
-    println("Bonus: ${angelica.bonus()}")
-    println("")
+    currentAccount.deposit(1000.0)
+    savingsAccount.deposit(1000.0)
 
-    val douglas = Manager(
-        name = "douglas",
-        cpf = "222.222.222-22",
-        wege = 2000.0,
-        password = 1234
-    )
+    println("Current Balance: ${currentAccount.balance}")
+    println("Savings Balance: ${savingsAccount.balance}")
 
-    println("Name: ${douglas.name}")
-    println("CPF: ${douglas.cpf}")
-    println("Wege: ${douglas.wege}")
-    println("Bonus: ${douglas.bonus()}")
-    println("")
+    currentAccount.withdraw(100.0)
+    savingsAccount.withdraw(100.0)
 
-    if (douglas.authentic(1234)) {
-        println("Successfully authenticated")
-    } else {
-        println("Authentication failed")
-    }
-    println("")
+    println("Current Balance after withdrawal: ${currentAccount.balance}")
+    println("Savings Balance after withdrawal: ${savingsAccount.balance}")
 
-    val maicon = Director(
-        name = "Maicon",
-        cpf = "333.333.333-33",
-        wege = 4000.00,
-        password = 4000,
-        plr = 200.0
-    )
+    currentAccount.transfer(100.0, savingsAccount)
 
-    println("Name: ${maicon.name}")
-    println("CPF: ${maicon.cpf}")
-    println("Wege: ${maicon.wege}")
-    println("Bonus: ${maicon.bonus()}")
-    println("PLR: ${maicon.plr}")
-    println("")
+    println("Current Balance after transfer for savings: ${currentAccount.balance}")
+    println("Savings Balance after receiving transfer: ${savingsAccount.balance}")
 
-    if (maicon.authentic(4000)){
-        println("Successfully authenticated")
-    } else {
-        println("Authentication failed")
-    }
-    println("")
+    savingsAccount.transfer(200.0, currentAccount)
 
-    val fabio: Employee = Analyst(
-        name = "Fábio",
-        cpf = "444.444.444-44",
-        wege = 3000.0
-    )
-    println("")
-
-    val caculator = BonusCaculator()
-    caculator.register(angelica)
-    caculator.register(douglas)
-    caculator.register(maicon)
-    caculator.register(fabio)
-
-    println("Total bonus: ${caculator.total}")
+    println("Savings Balance after transfer for current: ${savingsAccount.balance}")
+    println("Current Balance after receiving transfer: ${currentAccount.balance}")
 }
 
 

@@ -1,4 +1,4 @@
-class Account(
+open class Account(
     var titular: String,
     val number: Int
 ) {
@@ -16,7 +16,7 @@ class Account(
         }
     }
 
-    fun withdraw(value: Double) {
+    open fun withdraw(value: Double) {
         if (balance >= value) {
             balance -= value
         }
