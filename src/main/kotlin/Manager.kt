@@ -1,23 +1,16 @@
 class Manager(
-     name: String,
-     cpf: String,
-     wege: Double,
-    val password: Int
-) : Employee(
+    name: String,
+    cpf: String,
+    wege: Double,
+    password: Int
+) : AdminEmployee(
     name = name,
     cpf = cpf,
-    wege = wege
+    wege = wege,
+    password = password
 ) {
 
     override fun bonus(): Double {
         return wege
     }
-
-    fun authentic(password: Int): Boolean {
-        if (this.password == password){
-            return true
-        }
-        return false
-    }
-
 }

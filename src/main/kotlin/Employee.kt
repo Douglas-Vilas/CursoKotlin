@@ -4,4 +4,5 @@ abstract class Employee(
     val wege: Double,
 ) {
     abstract fun bonus(): Double
-}
+    }
+
