@@ -4,4 +4,10 @@ class SavingsAccount(
 ) : Account(
     titular = titular,
     number = number
-)
+) {
+    override fun withdraw(value: Double) {
+        if(this.balance >= value){
+            this.balance -= value
+        }
+    }
+}

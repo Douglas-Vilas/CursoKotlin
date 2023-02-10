@@ -1,9 +1,9 @@
-open class Account(
+abstract class Account(
     var titular: String,
     val number: Int
 ) {
     var balance = 0.0
-        private set
+        protected set
 
 //    constructor(titular: String, number: Int){
 //        this.titular = titular
@@ -16,11 +16,7 @@ open class Account(
         }
     }
 
-    open fun withdraw(value: Double) {
-        if (balance >= value) {
-            balance -= value
-        }
-    }
+    abstract fun withdraw(value: Double)
 
     fun transfer(value: Double, destiny: Account): Boolean {
         if (balance >= value) {

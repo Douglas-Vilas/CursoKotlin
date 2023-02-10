@@ -1,4 +1,4 @@
-class Analyst(
+class Assistant(
     name: String,
     cpf: String,
     wege: Double,
@@ -7,8 +7,8 @@ class Analyst(
     cpf = cpf,
     wege = wege
 ) {
-
     override fun bonus(): Double {
-        return wege * 0.1
+        return wege * 0.05
     }
+
 }

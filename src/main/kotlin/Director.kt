@@ -11,7 +11,7 @@ class Director(
 ) {
 
     override fun bonus(): Double {
-        return super.bonus() + wege + plr
+        return wege + plr
     }
 
     fun authentic(password: Int): Boolean {

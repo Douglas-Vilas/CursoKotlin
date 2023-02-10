@@ -1,5 +1,5 @@
 fun testsEmployees() {
-    val angelica = Employee(
+    val angelica = Analyst(
         name = "Angélica",
         cpf = "111.111.111-11",
         wege = 1000.0,

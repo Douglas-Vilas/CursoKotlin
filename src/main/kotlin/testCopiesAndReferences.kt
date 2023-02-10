@@ -6,9 +6,9 @@ fun testCopiesAndReferences() {
     println("NumberX $numberX")
     println("NumberY $numberY")
 
-    val accountMaicon = Account("Maicon", 1002)
+    val accountMaicon = CurrentAccount("Maicon", 1002)
     accountMaicon.titular = "Maicon"
-    var accountMae = Account("Mother", 1003)
+    var accountMae = SavingsAccount("Mother", 1003)
     accountMae.titular = "Mother"
     accountMaicon.titular = "Maicon"
 

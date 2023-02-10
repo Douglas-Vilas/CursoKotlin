@@ -1,8 +1,8 @@
 fun testAccountBehaviors() {
-    val accountDouglas = Account(titular = "Douglas", number = 1000)
+    val accountDouglas = CurrentAccount(titular = "Douglas", number = 1000)
     accountDouglas.deposit(200.0)
 
-    val accountAngelica = Account(titular = "Angélica", number = 1001)
+    val accountAngelica = SavingsAccount(titular = "Angélica", number = 1001)
     accountAngelica.deposit(300.0)
 
     println(accountAngelica.titular)

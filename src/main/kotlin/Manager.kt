@@ -10,7 +10,7 @@ class Manager(
 ) {
 
     override fun bonus(): Double {
-        return super.bonus() + wege
+        return wege
     }
 
     fun authentic(password: Int): Boolean {
