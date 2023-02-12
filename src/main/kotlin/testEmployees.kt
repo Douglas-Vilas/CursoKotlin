@@ -8,7 +8,7 @@ fun testsEmployees() {
     println("Name: ${angelica.name}")
     println("CPF: ${angelica.cpf}")
     println("Wege: ${angelica.wege}")
-    println("Bonus: ${angelica.bonus()}")
+    println("Bonus: ${angelica.bonus}")
     println("")
 
     val douglas = Manager(
@@ -21,7 +21,7 @@ fun testsEmployees() {
     println("Name: ${douglas.name}")
     println("CPF: ${douglas.cpf}")
     println("Wege: ${douglas.wege}")
-    println("Bonus: ${douglas.bonus()}")
+    println("Bonus: ${douglas.bonus}")
     println("")
 
     if (douglas.authentic(1234)) {
@@ -42,7 +42,7 @@ fun testsEmployees() {
     println("Name: ${maicon.name}")
     println("CPF: ${maicon.cpf}")
     println("Wege: ${maicon.wege}")
-    println("Bonus: ${maicon.bonus()}")
+    println("Bonus: ${maicon.bonus}")
     println("PLR: ${maicon.plr}")
     println("")
 

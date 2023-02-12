@@ -8,7 +8,8 @@ class Analyst(
     wege = wege
 ) {
 
-    override fun bonus(): Double {
-        return wege * 0.1
-    }
+    override val bonus: Double
+        get() {
+            return wege * 0.1
+        }
 }

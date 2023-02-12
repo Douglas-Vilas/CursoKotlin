@@ -8,9 +8,17 @@ class Manager(
     cpf = cpf,
     wege = wege,
     password = password
-) {
+), Authenticated {
 
-    override fun bonus(): Double {
-        return wege
+    override val bonus: Double
+        get() {
+            return wege
+        }
+
+    override fun authenticate(password: Int): Boolean {
+        if (this.password == password) {
+            return true
+        }
+        return false
     }
 }

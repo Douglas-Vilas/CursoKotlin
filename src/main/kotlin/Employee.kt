@@ -3,6 +3,6 @@ abstract class Employee(
     val cpf: String,
     val wege: Double,
 ) {
-    abstract fun bonus(): Double
+    abstract val bonus: Double
     }
 

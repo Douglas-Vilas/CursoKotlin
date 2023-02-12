@@ -22,5 +22,5 @@ fun testAuthentication() {
     val system = InternalSystem()
     system.enter(manager, 1234)
     system.enter(director, 4000)
-  //  system.enter(client, 3412)
+    system.enter(client, 3412)
 }

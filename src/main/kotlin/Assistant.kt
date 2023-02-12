@@ -7,8 +7,9 @@ class Assistant(
     cpf = cpf,
     wege = wege
 ) {
-    override fun bonus(): Double {
-        return wege * 0.05
-    }
+    override val bonus: Double
+        get() {
+            return wege * 0.05
+        }
 
 }
