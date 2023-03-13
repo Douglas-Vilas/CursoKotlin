@@ -1,16 +1,10 @@
 class Client(
     val name: String,
     val cpf: String,
-    val password: Int
+    private val password: Int
 ) : Authenticated {
-    fun authentic(password: Int): Boolean {
-        if (this.password == password) {
-            return true
-        }
-        return false
-    }
 
-    override fun authenticate(password: Int): Boolean {
+    override fun authentic(password: Int): Boolean {
         if (this.password == password) {
             return true
         }

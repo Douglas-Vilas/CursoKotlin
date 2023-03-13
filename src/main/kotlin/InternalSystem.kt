@@ -9,6 +9,3 @@ class InternalSystem {
     }
 }
 
-private fun Authenticated.authentic(password: Int): Boolean {
-    return authentic(password)
-}

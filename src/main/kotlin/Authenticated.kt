@@ -1,3 +1,4 @@
 interface Authenticated {
-    fun authenticate(password: Int): Boolean
+    fun authentic(password: Int): Boolean
+
 }

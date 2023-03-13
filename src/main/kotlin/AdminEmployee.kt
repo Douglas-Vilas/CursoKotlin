@@ -2,14 +2,14 @@ abstract class AdminEmployee(
      name: String,
      cpf: String,
      wege: Double,
-    val password: Int
+    protected val password: Int
 ) : Employee(
     name = name,
     cpf = cpf,
     wege = wege
-) {
+), Authenticated {
 
-    fun authentic(password: Int): Boolean {
+    override fun authentic(password: Int): Boolean {
         if (this.password == password) {
             return true
         }
