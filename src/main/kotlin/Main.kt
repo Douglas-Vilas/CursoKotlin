@@ -1,9 +1,8 @@
-import test.testAccountBehaviors
-import test.testAuthentication
+import test.testsEmployees
 
 fun main() {
     // Design of a digital Bank
-    testAccountBehaviors()
+    testsEmployees()
 }
 
 
