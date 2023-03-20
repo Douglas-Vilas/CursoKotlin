@@ -1,3 +1,8 @@
+package test
+
+import model.CurrentAccount
+import model.SavingsAccount
+
 fun testCopiesAndReferences() {
     val numberX = 10
     var numberY = numberX

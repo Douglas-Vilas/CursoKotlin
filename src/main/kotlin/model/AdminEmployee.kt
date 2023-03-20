@@ -1,3 +1,8 @@
+package model
+
+import model.Authenticated
+import model.Employee
+
 abstract class AdminEmployee(
      name: String,
      cpf: String,

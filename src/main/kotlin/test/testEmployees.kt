@@ -1,3 +1,7 @@
+package test
+
+import model.*
+
 fun testsEmployees() {
     val angelica = Analyst(
         name = "Angélica",

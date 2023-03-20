@@ -1,3 +1,7 @@
+package model
+
+import model.Authenticated
+
 class InternalSystem {
 
     fun enter(admin: Authenticated, password: Int) {

@@ -1,3 +1,8 @@
+package test
+
+import model.CurrentAccount
+import model.SavingsAccount
+
 fun testDiferentAccounts() {
     val currentAccount = CurrentAccount(
         titular = "Angélica",

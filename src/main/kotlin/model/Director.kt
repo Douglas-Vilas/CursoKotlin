@@ -1,16 +1,19 @@
-class Manager(
+package model
+
+class Director(
     name: String,
     cpf: String,
     wege: Double,
-    password: Int
+    password: Int,
+    val plr: Double
 ) : AdminEmployee(
     name = name,
     cpf = cpf,
     wege = wege,
     password = password
-) {
+){
     override val bonus: Double
         get() {
-            return wege
+            return wege + plr
         }
 }

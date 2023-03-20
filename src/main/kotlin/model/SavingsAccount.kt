@@ -1,3 +1,7 @@
+package model
+
+import model.Account
+
 class SavingsAccount(
     titular: String,
     number: Int

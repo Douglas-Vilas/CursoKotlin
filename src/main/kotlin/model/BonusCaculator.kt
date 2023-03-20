@@ -1,3 +1,7 @@
+package model
+
+import model.Employee
+
 class BonusCaculator {
 
     // Total company bonus

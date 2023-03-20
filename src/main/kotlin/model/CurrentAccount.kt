@@ -1,3 +1,7 @@
+package model
+
+import model.Account
+
 class CurrentAccount(
     titular: String,
     number: Int

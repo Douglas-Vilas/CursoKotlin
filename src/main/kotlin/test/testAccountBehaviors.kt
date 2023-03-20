@@ -1,3 +1,8 @@
+package test
+
+import model.CurrentAccount
+import model.SavingsAccount
+
 fun testAccountBehaviors() {
     val accountDouglas = CurrentAccount(titular = "Douglas", number = 1000)
     accountDouglas.deposit(200.0)
