@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee34839-0683-4156-8f45-c144131640d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/newmodel/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
@@ -19,6 +20,7 @@
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
         <option value="Kotlin Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
