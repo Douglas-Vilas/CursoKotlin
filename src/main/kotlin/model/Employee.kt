@@ -1,4 +1,5 @@
 package model
+// Full qualified name
 
 abstract class Employee(
     val name: String,
